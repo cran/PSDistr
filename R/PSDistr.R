@@ -1,0 +1,71 @@
+#' The list of package functions and their demonstration
+#'
+#' The \strong{PSDistr} presents the following distribution derived from the normal distribution:
+#' two-piece power normal (TPPN), plasticizing component (PC), DS normal (DSN), expnormal (EN),
+#' Sulewski plasticizing component (SPC), easily changeable kurtosis (ECK) distributions. Density, distribution function, quantile function and random generation are presented.
+#' The list of package functions is as follows:
+#'
+#' @aliases PSDistr-package
+#' @name PSDistr
+#'
+#' @section Functions for the two-piece power normal distribution:
+#'
+#' \code{\link{dtppn}}
+#'
+#' \code{\link{ptppn}}
+#'
+#' \code{\link{qtppn}}
+#'
+#' \code{\link{rtppn}}
+#'
+#' @section Functions for the plasticizing component distribution:
+#'
+#' \code{\link{dpc}}
+#'
+#' \code{\link{ppc}}
+#'
+#' \code{\link{qpc}}
+#'
+#' \code{\link{rpc}}
+#'
+#' @section Functions for the DS normal distribution:
+#'
+#' \code{\link{ddsn}}
+#'
+#' \code{\link{pdsn}}
+#'
+#' \code{\link{qdsn}}
+#'
+#' \code{\link{rdsn}}
+#'
+#' #' @section Functions for the expnormal distribution:
+#'
+#' \code{\link{den}}
+#'
+#' \code{\link{pen}}
+#'
+#' \code{\link{qen}}
+#'
+#' \code{\link{ren}}
+#'
+#' #' @section Functions for the Sulewski plasticizing component distribution:
+#'
+#' \code{\link{dspc}}
+#'
+#' \code{\link{pspc}}
+#'
+#' \code{\link{qspc}}
+#'
+#' \code{\link{rspc}}
+#'
+#' #' @section Functions for the easily changeable kurtosis distribution:
+#'
+#' \code{\link{deck}}
+#'
+#' \code{\link{peck}}
+#'
+#' \code{\link{qeck}}
+#'
+#' \code{\link{reck}}
+#'
+NULL

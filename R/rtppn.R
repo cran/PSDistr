@@ -1,0 +1,56 @@
+#' @title Two-Piece Power Normal Distribution
+#'
+#' @description
+#' Density, distribution function, quantile function and random generation
+#' for the two-piece power normal distribution with parameters teta, s1, s2 and c.
+#'
+#' @param n positive number of observations
+#' @param teta position parameter
+#' @param s1 positive scale parameter
+#' @param s2 positive scale parameter
+#' @param c shape parameter (c>=1)
+#' @return The function returns random generator values for the two-piece power normal distribution.
+#' @rdname rtppn
+#'
+#' @details
+#' Probability density function
+#' see formula (4) in the article
+#' Cumulative distribution function
+#' see formula (5)
+#' Quantile functon
+#' see formula (10)
+#' Random number generator
+#' see formula (21)
+#'
+#' @author
+#' Piotr Sulewski, \email{piotr.sulewski@upsl.edu.pl}, Pomeranian UNiwersity in Slupsk.
+#'
+#' @references
+#' {Sulewski, P. (2021). \emph{Two-Piece Power Normal Distribution,} Communications in Statistics - Theory and Method 50(11), 2619-2639.}
+#'
+#' @examples
+#' dtppn(2,1,1,1,2)
+#' ptppn(2,1,1,1,2)
+#' qtppn(0.5,1,1,1,2)
+#' rtppn(10,1,1,1,2)
+#'
+#' @export
+
+rtppn <- function(n, teta, s1, s2, c) {
+  rnorm <- NULL
+  if (s1 > 0 & s2 > 0 & c >= 1)
+  {
+    x <- numeric(n)
+    for (i in 1:n)
+    {
+      rn <- rnorm(1, 0, 1)
+      x[i] <- ifelse(rn < 0, -s1 * (-rn) ^ (1 / c) + teta,
+              s2 * (rn) ^ (1 / c) + teta)
+    }
+    return (x)
+  }
+  else
+  {
+    return('s1>0 and s2>0 and c>=1')
+  }
+}
